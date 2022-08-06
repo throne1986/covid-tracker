@@ -1,6 +1,89 @@
 body{
+    position: relative;
     margin: 0%;
     padding: 0px;
     height: 100vh;
-    background-color: grayscale($color: #000000);
+    // background-color: lightgray;
 }
+
+body, html {
+    overflow-x: hidden;
+    }
+
+*>*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+/* ................. navbar ................. */ 
+
+#main-menu {
+    position: inherit;
+    img {
+        width: 100%;
+        padding: 0% 20%;
+    }
+
+}
+
+
+/* ................. /navbar ................. */ 
+
+/* ................. home .................... */ 
+
+#card-container {
+    margin: 45px 2%;
+}
+
+#cards{
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.home-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    font-size: 2.125rem;
+    color: #000;
+}
+
+
+.infected {
+    border-bottom: 10px solid rgba(0, 0, 255, 0.5);
+  }
+  
+  .recovered{
+    border-bottom: 10px solid rgba(0, 255, 0, 0.5);
+  }
+  
+  .deaths{
+    border-bottom: 10px solid rgba(255, 0, 0, 0.5);
+  }
+  #countries{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+  }
+  .chart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+    margin: 0px auto;
+  }
+/* ................. /home ................. */ 
