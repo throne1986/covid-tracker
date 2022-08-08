@@ -8,6 +8,7 @@ import { RootState } from "../reducers/rootReducer";
 import CountUp from "react-countup";
 import { IMatches } from "../interfaces/interfaces";
 import  ChartData from './ChartData';
+import AllCountries from "./AllCountries";
 
 const Home: React.FC = () => {
 
@@ -155,6 +156,8 @@ const onSuggestionsHandler = (text: string) =>{
         >
             <ChartData  />
         </Box>
+        
+        <AllCountries />
     </React.Fragment>
   )
 }
