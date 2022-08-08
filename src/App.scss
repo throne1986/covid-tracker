@@ -87,3 +87,23 @@ ul{
     margin: 0px auto;
   }
 /* ................. /home ................. */ 
+
+
+/* ................. Footer .................. */ 
+
+#main-footer {
+    box-shadow: 0px 1px 3px -1px #464545;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-footer .footer-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ................. /Footer ................. */ 
