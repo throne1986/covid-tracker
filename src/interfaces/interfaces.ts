@@ -30,3 +30,11 @@ export interface IState {
 export interface IMatches {
     name:string
 }
+
+export interface IConfirmed {
+        confirmed: string,
+        deaths: number,
+        recovered: number,
+        countryRegion: string,
+        deaths28Days: number
+}
