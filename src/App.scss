@@ -105,5 +105,27 @@ ul{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: inherit;
+}
+
+.main-data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+    max-width: 650px;
+    width: 650px;
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* ................. /Footer ................. */ 
+
+.search-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}

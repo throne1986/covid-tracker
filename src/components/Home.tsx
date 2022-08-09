@@ -30,6 +30,8 @@ useEffect (() => {
     dispatch(getCountries())
 }, [dispatch])
 
+console.log('data', data)
+
 
 const onChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) =>{
     setText((event.target as HTMLInputElement).value);
