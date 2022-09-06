@@ -9,6 +9,7 @@ import CountUp from "react-countup";
 import { IMatches } from "../interfaces/interfaces";
 import  ChartData from './ChartData';
 import AllCountries from "./AllCountries";
+import Users from "./Users"
 
 const Home: React.FC = () => {
 
@@ -29,8 +30,6 @@ useEffect (() => {
 useEffect (() => {
     dispatch(getCountries())
 }, [dispatch])
-
-console.log('data', data)
 
 
 const onChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) =>{
@@ -160,6 +159,7 @@ const onSuggestionsHandler = (text: string) =>{
         </Box>
         
         <AllCountries />
+        {/* <Users /> */}
     </React.Fragment>
   )
 }
