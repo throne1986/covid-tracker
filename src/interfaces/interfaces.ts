@@ -6,6 +6,19 @@ export interface ICountries {
     iso3: string
     }[]
 }
+
+
+export interface IUsers{
+        id: number,
+        name: string,
+}
+
+export interface IUsersState{
+    users: IUsers[],
+    status: string
+}
+
+
 export interface IState {
     isCountry: boolean,
     country:string,
@@ -25,7 +38,7 @@ export interface IState {
         lastUpdate: Date
     }[],
     countries: ICountries[],
-    status: string
+    status: string,
 }
 export interface IMatches {
     name:string

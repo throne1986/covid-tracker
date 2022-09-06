@@ -1,9 +1,10 @@
 
 
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
 import api from "../api/api";
 import {IState} from "../interfaces/interfaces";
-import { ICountries } from "../interfaces/interfaces";
+import { ICountries, IUsers } from "../interfaces/interfaces";
 
 const initialState :IState = {
     isCountry: false,
@@ -13,10 +14,6 @@ const initialState :IState = {
     status: ""
 }
 
-interface IData {
-    country: string
-    isCountry: false
-}
 
 export const getCovidData = createAsyncThunk(
 "/api", 
@@ -33,8 +30,6 @@ export const getCovidData = createAsyncThunk(
                 response = await api.get("/api");
             }
 
-            // console.log('response..', response.data);
-
             return response.data;
 
         }catch(error){
@@ -49,18 +44,13 @@ export const getCountries = createAsyncThunk<ICountries>(
 
     async () =>{
         try{
-
             const response = await api.get("/api/countries");
-
             return response.data;
-
         }catch(error){
             throw error
         }
     }
 )
-
-
 
 const appSlice = createSlice({
     name: "app-reducer",
@@ -71,10 +61,11 @@ const appSlice = createSlice({
         },
         setCountry: (state, action) =>{
            state.country = action.payload
-        }
+        },
     },
     extraReducers: (builder) =>{
         
+        //covid use case
         builder.addCase(getCovidData.pending, (state) =>{
             state.status = "loading"
         });
@@ -86,6 +77,8 @@ const appSlice = createSlice({
         builder.addCase(getCovidData.rejected, (state, {payload}) =>{
             state.status = "failed"
         });
+
+        // countries use case
         builder.addCase(getCountries.pending, (state) =>{
             state.status = "loading"
         });
@@ -99,6 +92,6 @@ const appSlice = createSlice({
     }
 })
 
-export const { setIsCountry, setCountry } = appSlice.actions;
+export const { setIsCountry, setCountry,} = appSlice.actions;
 
 export default appSlice.reducer;

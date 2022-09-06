@@ -43,9 +43,6 @@ const AllCountries:React.FC =()=> {
         
     }, [])
 
-    if(true){
-        console.log('uncle drew')
-    }
 
     useEffect(() =>{
         getConfirmedCases();
@@ -72,7 +69,6 @@ const AllCountries:React.FC =()=> {
 
 
       const handleSearch = (value: string) =>{
-        console.log('value', value.toLowerCase())
 
         let matches:IConfirmed[] = []
         
@@ -109,6 +105,7 @@ const AllCountries:React.FC =()=> {
         }
 
     }
+
 
   return (
     <React.Fragment>
